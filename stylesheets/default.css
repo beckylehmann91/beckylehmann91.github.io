@@ -1,0 +1,35 @@
+* {
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("http://sf.co.ua/13/02/wallpaper-625826.jpg");
+}
+
+nav {
+  text-align: right;
+}
+
+.quote {
+  margin-top: 150px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.content {
+  margin-bottom: 250px;
+}
+
+.tagline {
+  font-size: 60px;
+}
+
+.intro {
+  font-size: 24px;
+}
+
+footer {
+  text-align: center;
+}
