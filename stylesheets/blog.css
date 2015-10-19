@@ -1,6 +1,20 @@
+* {
+  color: #919292;
+  text-align: left;
+}
+
 .image {
   display: block;
   background: transparent;
   width: 30em;
   height: 12em;
+  text-align: center;
+}
+
+.subhead {
+  font-size: 1.25em;
+}
+
+article > section {
+  margin-top: 5%;
 }
