@@ -9,6 +9,8 @@
   width: 30em;
   height: 12em;
   text-align: center;
+  page-break-before: always;
+  page-break-after: always;
 }
 
 .subhead {
