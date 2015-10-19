@@ -9,7 +9,7 @@
 <article>
   <header>
     <h1>Margins, Borders and Padding</h1>
-    <h2>Making sense of CSS positioning concepts</h2>
+    <h2 class="subhead">Making sense of CSS positioning concepts</h2>
     <h3>by <a href="http://beckylehmann91.github.io/">Becky Lehmann</a></h3>
     <h3>October 18, 2015</h3>
   </header>
@@ -21,6 +21,7 @@
 
         Before we take a deeper dive, it might help to put a visual to the three concepts I'll be discussing. Use this as a reference throughout the article:
         <br>
+        <br>
 
         <img class="image" src="../imgs/margins_borders_padding.png">
         <br>
@@ -29,13 +30,16 @@
     <p>
         As indicated in the visual above, the margin represents the space surrounding the HTML element. You can adjust margins to move any given element relative to other elements or to the "walls" of the webpage. Let's take the example of the Google logo. Here is a picture of the orignal logo, no changes made to the margins:
         <br>
+        <br>
         <img class="image" src="../imgs/plain-logo.png">
         <br>
         Theoretically, if I change the margins of the logo, I should be able to move the image vertically or horizontally across the page. Creating a negative margin will "remove" space. Let's see what happens when I specify a margin-top: -80px for the logo. This should "remove" 80px of space between the logo and the top of the page.
         <br>
+        <br>
         <img class="image" src="../imgs/negative-margin.png">
         <br>
         Yes! As you can see, the logo has moved upward on the page. Now let's try the reverse, increasing the margin with a positive value. If I specify a margin-top: 100px, I should see the logo move down on the page.
+        <br>
         <br>
         <img class="image" src="../imgs/positive-margin.png">
         <br>
@@ -45,9 +49,11 @@
     <p>
         Now let's review borders. The border is essentially the outline of the HTML element. Using the Google logo again as an example, I've highlighted the border using black coloring:
         <br>
+        <br>
         <img class="image" src="../imgs/border-black-orig.png">
         <br>
         I can edit the style, color and thickness of the border using the border property. For example, I could specify border: dashed teal 10px, as I have done in the image below:
+        <br>
         <br>
         <img class="image" src="../imgs/border-teal.png">
         <br>
@@ -57,9 +63,11 @@
     <p>
         Finally, we get to padding. Padding is the space between the content of an element and its border. We can see the default setting for the Google logo has a padding-top: 112px, which creates space between the content and the top border of the image. You can see this again in the image below with the highlighted black border:
         <br>
+        <br>
         <img class="image" src="../imgs/border-black-orig.png">
         <br>
         So what happens if I specify padding: 40px? It should apply "space" of 40px to all sides of the content, between the outside borders. I've shown this below:
+        <br>
         <br>
         <img class="image" src="../imgs/even-padding.png">
         <br>

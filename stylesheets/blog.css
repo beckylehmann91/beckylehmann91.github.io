@@ -1,6 +1,7 @@
 * {
   color: #919292;
-  text-align: center;
+  text-align: left;
+  margin-right: 10%;
 }
 
 .image {
@@ -8,9 +9,9 @@
   background: transparent;
   width: 30em;
   height: 12em;
-  text-align: center;
   page-break-before: always;
   page-break-after: always;
+
 }
 
 .subhead {
@@ -19,4 +20,8 @@
 
 article > section {
   margin-top: 5%;
+}
+
+a:hover {
+  color: #FF9900;
 }
