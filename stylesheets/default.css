@@ -1,11 +1,12 @@
 * {
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color:  #CFD1D1;
   text-decoration: none;
+  text-align: center;
 }
 
 body {
-  background-image: url("http://sf.co.ua/13/02/wallpaper-625826.jpg");
+  background-color: #FFFFCC;
 }
 
 nav {
@@ -13,23 +14,44 @@ nav {
 }
 
 .quote {
-  margin-top: 150px;
+  margin-top: 15%;
   font-size: 14px;
-  font-style: italic;
+  font-weight: 100;
+  text-align: center;
 }
 
 .content {
-  margin-bottom: 250px;
+  margin-bottom: 40%;
 }
 
 .tagline {
   font-size: 60px;
+  color:#919292;
 }
 
 .intro {
   font-size: 24px;
+  margin-bottom: 0%;
+}
+
+.sunshine {
+  color: #FF9900;
 }
 
 footer {
   text-align: center;
+}
+
+.heading {
+  color: #919292;
+  margin-top: 10%;
+  font-size: 2em;
+}
+
+a:hover {
+  color: #FF9900;
+}
+
+a:visited {
+  color: #919292;
 }
