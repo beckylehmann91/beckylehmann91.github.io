@@ -54,3 +54,7 @@ a:hover {
 a:visited {
   color: #919292;
 }
+
+.main {
+  font-size: 2em;
+}
