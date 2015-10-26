@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Arrays and Hashes</title>
+</head>
+
+<body>
+<article>
+  <header>
+    <h1>Arrays and Hashes</h1>
+    <h2 class="subhead">What are they? When do I use each?</h2>
+    <h3>by <a href="http://beckylehmann91.github.io/">Becky Lehmann</a></h3>
+    <h3>October 26, 2015</h3>
+  </header>
+
+  <section>
+  <h1 class="subhead">Overview</h1>
+    <p>
+      When you're working in Ruby and looking to store information in a more organized way, arrays and hashes can be your best friends. Both are ordered collections of objects and serve a similar purpose in helping you access specific values using "keys" and indexes. So how do you know when to use one or the other? Let's explore that a bit further.
+    </p>
+  <h2 class="subhead">Arrays</h4>
+    <p>
+      As I mentioned before, arrays store objects, including anything from classes (things like strings ("Becky") and integers (24)) to even hashes and arrays. So let's say I create the array below, using some of my favorite things as the values:
+    </p>
+      <p>
+      <code>
+        favorite_things = ["chocolate", "ice cream", "rhinos"]
+      </code>
+      </p>
+    <p>
+      As you can see, I've assigned the array (the piece between the [] on the right) to a variable on the left, "favorite_things." In order to access any given element, I can use a numerical index.
+    </p>
+      <p>
+      <code>
+        puts favorite_things[0]
+        => "chocolate"
+      </code>
+      </p>
+    <p>
+      Using an index of "0", I am able to access the first item in the array. Similarly, favorite_things[1] will get the second value, favorite_things[2] wil get the third, and so on. In order to work backwards within the array, I can use negative values. Let's try this below:
+    </p>
+      <p>
+      <code>
+        puts favorite_things[-1]
+        => "rhinos"
+      </code>
+      </p>
+    <p>
+      Another thing worth mentioning is the importance of iterators. Iterators are basically methods that act like loops. For example, if I want to "puts" out every object in my array, I could do the following:
+    </p>
+      <p>
+      <code>
+        favorite_things.each { |string| puts string }
+        => "chocolate"
+        => "ice cream"
+        => "rhinos"
+      </code>
+      </p>
+    <p>
+      So there's a basic start on arrays. Let's touch on hashes.
+
+  <h3 class="subhead">Hashes</h3>
+    <p>
+      As I mentioned earlier, a hash is an ordered collection of objects. It has similar qualities to an array, but unlike the numerical index that an array uses, a hash uses key/value pairs. Keys are unique, so there can be only one key/value pair for any given key. First, let's look at the format of a hash, using a few more of my favorite things:
+    </p>
+      <p>
+      <code>
+        more_favorites = { color: "yellow",
+          number: 16,
+          holiday: "Christmas",
+          season: "autumn"
+          }
+      </code>
+      </p>
+    <p>
+      In the example above, the symbols on the left (:color, :number, :holiday and :season) represent keys. The associated items on the right ("yellow", 16, "Christmas" and "autumn") represent values. Similar to arrays, I can "call on" specific values using keys:
+    </p>
+      <p>
+      <code>
+        puts more_favorites[color]
+        => "yellow"
+      </code>
+      </p>
+    <p>
+      Alas! We are able to access specific values through keys. Also like arrays (and using the same format), you can iterate over hashes with methods like ".each" that we used above.
+    </p>
+  <h4 class="subhead">Additional Thoughts</h2>
+    <p>
+      I've given you a basic overview of arrays and hashes, including how to access objects within each. But you might be asking, when would I use one or the other? While I'm sure there are plenty of opinions on this, I'll give you my point of view. Since arrays use numerical indexes to reference objects, I tend to think of arrays as most helpful when you're considering the order or position of the objects. For example, if I want to access the first or last element, as we did above, I am able to do that. I can also use iterators like ".sort" and ".min" to sort the integers from lowest to highest, or find the minimum value.
+    </p>
+    <p>
+      On the other hand, I tend to find hashes more useful when I'm looking for a more descriptive way to access a value. In the array example I provided above, my favorite animal was listed as the third element. In order to access this element, I need to know where its position is in the array. Also, someone looking at the array might not know exactly what "rhino" means. Whereas with a hash, I could use a descriptive key like favorite_animal and immediately access "rhino" as the value, without needing to know its position within the hash.
+    </p>
+    <p>
+      That's all for now. Best of luck with hashes and arrays!
+    </p>
+    <p>
+      Interested in reading more of my posts? See a full list of my blog posts <a class="sunshine" href="http://www.github.io/blog/index.html">here</a>.
+    </p>
+  </aside>
+</article>
+</body>
+
