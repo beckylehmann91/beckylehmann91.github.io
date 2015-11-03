@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Enumerable#group_by Method</title>
+</head>
+
+<body>
+<article>
+  <header>
+    <h1>Using Enumerable#group_by in Ruby</h1>
+    <h2 class="subhead">Understanding Basic Ruby Enumerable Methods</h2>
+    <h3>by <a href="http://beckylehmann91.github.io/">Becky Lehmann</a></h3>
+    <h3>November 2, 2015 </h3>
+  </header>
+
+  <section>
+  <h1 class="subhead">Overview</h1>
+    <p>
+      Before we jump into discussing Enumerable#group_by, I'd like to begin with an overview of Enumerable Methods in general. Many of the collection objects you'll see in Ruby will include an Enumerable module. These must be defined within a class in terms of an "each" method, which assigns certain collective behaviors to each of the objects within the class. While there are many reasons why you might want to use Enumerable methods to iterate through collections of data, we'll specifically be focusing on how to organize selection results. This is where the method "group_by" comes in handy! Let's take a look.
+    </p>
+  <h2 class="subhead">How to use Enumerable#group_by</h4>
+    <p>
+      The group_by operation takes a block as its input and produces a hash. As with any "each" type of method, every object is run through the block. In this case, the elements of an enumerable array serve as the keys of the hash, while the block produces the corresponding values. Let's say you wanted to group an array of integers into odd and even values. You might try the following:
+    </p>
+    <p>
+      ```ruby
+      >> numbers = [1, 2, 5, 7, 4, 6]
+      >> numbers.group_by { |number| number % 2 }
+      => { 0 => [2, 4, 6], 1 => [1, 5, 7] }
+      ```
+    </p>
+    <p>
+      In the example above, we take an array of integers (called "numbers") then pass each object within the array through a block. The block uses modulo, which will divide each element in the array by two then produce a remainder. The output is a hash showing two different results as the keys: 0 and 1, the two possible remainder values. The cases where the number / 2 had a remainder of zero produced an array of even numbers, [2, 4, 6]. The cases with a remainder of one produced an array of odd numbers, [1, 5, 7].
+    </p>
+  <h3 class="subhead">What can group_by do for you?</h3>
+    <p>
+      As you can imagine, the group_by operation comes in handy in a variety of situations. You could group strings by length/size, or divide an array based on conditional values (x > some_integer). Essentially, if you have a collection of data where, 1) you want to pass each element through a block based on a conditional value, and 2) want to group values based on a certain set of key values, be sure to look to group_by for help.
+    </p>
+  </div>
+  <aside>
+    <p>
+      Interested in reading more of my posts? See a full list of my blog posts <a class="sunshine" href="http://www.github.io/blog/index.html">here</a>.
+    </p>
+  </aside>
+</article>
+</body>
