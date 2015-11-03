@@ -1,0 +1,17 @@
+img {
+  border-radius: 1.5em;
+  margin-top: 5%;
+}
+
+.logo {
+  height: 2em;
+  width: 2em;
+}
+
+#facebook {
+  margin-right: 5%;
+}
+
+#linkedin {
+  margin-right: 5%;
+}
