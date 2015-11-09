@@ -21,9 +21,9 @@
     </p>
     <p>
     <code>
-      def method_name(optional_arguments)
-        # do something
-      end
+      <br>def method_name(optional_arguments)
+        <br># do something
+      <br>end
     </code>
     </p>
     <p>
@@ -31,28 +31,28 @@
     </p>
     <p>
     <code>
-      class Greeting
-        def initialize(first_name, last_name)
-          @first_name = first_name
-         @last_name = last_name
-        end
-      end
+      <br>class Greeting
+        <br>def initialize(first_name, last_name)
+          <br>@first_name = first_name
+          <br>@last_name = last_name
+        <br>end
+      <br>end
     </code>
     </p>
     <p>
       The example begins with the definition of a class, Greeting. The initialize method takes two String arguments, first_name and last_name. The next part may look a bit unfamiliar, as I've assigned each of the arguments to the variables @first_name and @last_name. You'll see these used a lot in classes, they're called instance variables. Instance variables are those that begin with an @ symbol and allow objects to maintain state. The second quality is especially important because it allows us to use instance variables across methods within the same class. If you remember, local variables can only be used within the method where they are created. Let's add another method to our code to create the friendly greeting.
     </p>
     <code>
-      class Greeting
-        def initialize(first_name, last_name)
-          @first_name = first_name
-         @last_name = last_name
-        end
+      <br>class Greeting
+        <br>def initialize(first_name, last_name)
+          <br>@first_name = first_name
+          <br>@last_name = last_name
+        <br>end
 
-        def greet
-          puts "Hello #{@first_name} #{@last_name}! It's very nice to meet you."
-        end
-      end
+        <br>def greet
+          <br>puts "Hello #{@first_name} #{@last_name}! It's very nice to meet you."
+        <br>end
+      <br>end
     </code>
     </p>
     <p>
@@ -63,9 +63,9 @@
     </p>
     <p>
     <code>
-      my_greeting = Greeting.new("Becky", "Lehmann")
-      my_greeting.greet
-      => "Hello Becky Lehmann! It's very nice to meet you."
+      <br>my_greeting = Greeting.new("Becky", "Lehmann")
+      <br>my_greeting.greet
+      <br>=> "Hello Becky Lehmann! It's very nice to meet you."
     </code>
     </p>
     <p>
