@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Ruby Classes</title>
+</head>
+
+<body>
+<article>
+  <header>
+    <h1>Where to begin with Ruby Classes?</h1>
+    <h2 class="subhead">Classes, instance variables and instance methods</h2>
+    <h3>by <a href="http://beckylehmann91.github.io/">Becky Lehmann</a></h3>
+    <h3>November 9, 2015</h3>
+  </header>
+
+  <section>
+  <h1 class="subhead">Overview</h1>
+    <p>
+      If you're just beginning your Ruby journey, up to this point you have probably seen the standard format for defining a method. It looks something like this:
+    </p>
+    <p>
+    <code>
+      def method_name(optional_arguments)
+        # do something
+      end
+    </code>
+    </p>
+    <p>
+      Methods are helpful, but what if you want to achieve something a bit more complex, something that involves multiple related methods? That's where classes come in handy. Classes are basically collections of methods that serve the purose of grouping related behaviors. Class names begin with the capital letter. Many classes include an initialize method, which is executed every time an instance of the class is created. Let's look at an example, where I will use multiple methods to create a friendly greeting. I'll start with the initialize method:
+    </p>
+    <p>
+    <code>
+      class Greeting
+        def initialize(first_name, last_name)
+          @first_name = first_name
+         @last_name = last_name
+        end
+      end
+    </code>
+    </p>
+    <p>
+      The example begins with the definition of a class, Greeting. The initialize method takes two String arguments, first_name and last_name. The next part may look a bit unfamiliar, as I've assigned each of the arguments to the variables @first_name and @last_name. You'll see these used a lot in classes, they're called instance variables. Instance variables are those that begin with an @ symbol and allow objects to maintain state. The second quality is especially important because it allows us to use instance variables across methods within the same class. If you remember, local variables can only be used within the method where they are created. Let's add another method to our code to create the friendly greeting.
+    </p>
+    <code>
+      class Greeting
+        def initialize(first_name, last_name)
+          @first_name = first_name
+         @last_name = last_name
+        end
+
+        def greet
+          puts "Hello #{@first_name} #{@last_name}! It's very nice to meet you."
+        end
+      end
+    </code>
+    </p>
+    <p>
+      We now have a method called "greet," which incorporates the two instance variables we defined in the initialize method, @first_name and @last_name. If we had defined these as local variables within the first method, we would receive an error upon running the code, as the first_name and last_name local variables would not "exist" within the greet method.
+    </p>
+    <p>
+      Once we have created our Greeting class, we need to call the methods. I can create a new instance of Greeting by using Greeting.new.
+    </p>
+    <p>
+    <code>
+      my_greeting = Greeting.new("Becky", "Lehmann")
+      my_greeting.greet
+      => "Hello Becky Lehmann! It's very nice to meet you."
+    </code>
+    </p>
+    <p>
+      As you can see, I have created a new instance of Greeting with the arguments "Becky" and "Lehmann" for first_name and last_name. I've assigned this instance to my_greeting. I then call the instance method greet on my_greeting, which produces the output above. In this case, the method greet is called on an instance of Greeting, not on Greeting itself. For that reason, greet is considered an instance method. If I were to call greet directly on Greeting, sending a message to the class itself, it would be considered a class method.
+    </p>
+  <h4 class="subhead">Summary</h1>
+    <p>
+      Classes are a great way to group multiple behaviors and attributes into a convenient group. In the example above, we reviewed the basic format for a class and saw how to use instance variables to relay information across methods. Classes also allow code to be readable, breaking the information up into logical, descriptive chunks. Try practicing with classes on your own! What methods can you group together to create more effective, meaningful code?
+    </p>
+  </div>
+  <aside>
+    <p>
+      Interested in reading more of my posts? See a full list of my blog posts <a class="sunshine" href="http://www.github.io/blog/index.html">here</a>.
+    </p>
+  </aside>
+</article>
+</body>
