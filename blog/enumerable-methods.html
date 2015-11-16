@@ -23,13 +23,13 @@
     <p>
       The group_by operation takes a block as its input and produces a hash. As with any "each" type of method, every object is run through the block. In this case, the elements of an enumerable array serve as the keys of the hash, while the block produces the corresponding values. Let's say you wanted to group an array of integers into odd and even values. You might try the following:
     </p>
-    <p>
+      <pre>
       <code>
       >> numbers = [1, 2, 5, 7, 4, 6] <br>
       >> numbers.group_by { |number| number % 2 } <br>
       => { 0 => [2, 4, 6], 1 => [1, 5, 7] } <br>
       </code>
-    </p>
+      </pre>
     <p>
       In the example above, we take an array of integers (called "numbers") then pass each object within the array through a block. The block uses modulo, which will divide each element in the array by two then produce a remainder. The output is a hash showing two different results as the keys: 0 and 1, the two possible remainder values. The cases where the number / 2 had a remainder of zero produced an array of even numbers, [2, 4, 6]. The cases with a remainder of one produced an array of odd numbers, [1, 5, 7].
     </p>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Ruby vs. JavaScript</title>
+</head>
+
+<body>
+<article>
+  <header>
+    <h1>Ruby vs. JavaScript</h1>
+    <h2 class="subhead">A brief overview of the syntactic differences between Ruby and JavaScript</h2>
+    <h3>by <a href="http://beckylehmann91.github.io/">Becky Lehmann</a></h3>
+    <h3>November 16, 2015</h3>
+  </header>
+
+  <section>
+  <h1 class="subhead">Overview</h1>
+    <p>
+      If you have some exposure with Ruby and JavaScript, you've probably noticed several syntactic differences between the languages. Similar, I imagine, to trying to learn Spanish and French at the same time, the crossover between the Ruby and JavaScript can be pretty confusing. While you could take a much deeper dive into each of the topics I will cover (and you certainly should!), the purpose of this post is to give a high-level overview of some of those key syntactic differences.
+    </p>
+  <h2 class="subhead">Variable Declaration</h4>
+    <p>
+      In Ruby, variable declaration is pretty straighforward, following a format of <code>variable_name = assigned_value</code>. In JavaScript, the declaration looks a bit different:
+
+      <pre>
+      <code>
+        var variable_name = assigned_value
+      </code>
+      </pre>
+
+      As you can see, you must precede the variable name with "var" in order to indicate it is a variable. JavaScript uses this same format, regardless of the scope of the variable. You determine the scope not through the syntax of the variable name, but by looking at where the variable is defined (if variable_name is declared within a function, it is local to that function; if it is declared outside of any functions, it is considered global). The same concept of scope exists in Ruby. However, local variables look different from instance and global variables. For example, if I wanted to declare the same variable_name within a method, but make it accessible to other methods within the same class, I would declare it as @variable_name. Thus, JavaScript draws scope purely from where the variable is declared, while Ruby depends more on the format of the variable name itself.
+    </p>
+  <h3 class="subhead">Ruby Hashes and JavaScript Objects</h3>
+    <p>
+      In Ruby, you may see a hash constructed like so:
+      <pre>
+      <code>
+        my_hash = {
+          key_one: value_one,
+          key_two: value_two,
+          key_three: value_three
+      }
+      </code>
+      </pre>
+      The syntax looks pretty much the same in JavaScript, except that you would use the variable naming conventions described above. One of the main syntactic differences between hashes and objects relates to how values within the hash are accessed. In Ruby, you would use <code>my_hash[:key_one]</code> to retrieve the value <code>value_one</code>. In JavaScript, the more common notation is with a dot, like so: <code>my_hash.key_one</code>.
+    </p>
+  <h4 class="subhead">Methods</h2>
+    <p>
+      The main syntactic difference between methods in Ruby and JavaScript relates to the use of parenthesis when calling a method. Let's say I have a string "Becky" assigned to the variable my_name. In Ruby, if I wanted to convert the string to all uppercase letters and assign it to the variable upcase_name, I would do the following:
+      <pre>
+      <code>
+        my_name = "Becky"
+        upcase_name = my_name.upcase
+      </code>
+      </pre>
+      In JavaScript, you must use parenthesis when calling a function. Thus, a similar method in JavaScript would look like this:
+      <pre>
+      <code>
+        var my_name = "Becky"
+        var upcase_name = my_name.toUpperCase();
+      </code>
+      </pre>
+      As you can see, I've included a set of parenthesis after "toUpperCase," even though there is no argument included. In JavaScript, you must include parenthesis for many of these built-in methods, otherwise the code will not run properly.
+    </p>
+  <h4 class="subhead">Summary</h1>
+    <p>
+      While this is just a start to the syntactic differences between Ruby and JavaScript, it is important to note the details so you don't run into issues while writing your code. For all you Rubyists out there, beware of the JavaScript semicolons! They may trip you up along the way.
+    </p>
+  </div>
+  <aside>
+    <p>
+      Interested in reading more of my posts? See a full list of my blog posts <a class="sunshine" href="http://www.github.io/blog/index.html">here</a>.
+    </p>
+  </aside>
+</article>
+</body>
