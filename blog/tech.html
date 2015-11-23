@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Title</title>
+</head>
+
+<body>
+<article>
+  <header>
+    <h1>Using Recursion in Ruby</h1>
+    <h2 class="subhead">Cutting down on endless code with nested data structures</h2>
+    <h3>by <a href="http://beckylehmann91.github.io/">Becky Lehmann</a></h3>
+    <h3>November 23, 2015</h3>
+  </header>
+
+  <section>
+  <h1 class="subhead">Traditional Iteration in Ruby</h1>
+    <p>
+      If you've started to play around with nested data structures in Ruby (layer upon layer of arrays and hashes), you may have begun to see the limitations of standard iterative techniques for accessing inner elements of the structures. I'll give you an example. Recently, I was working on a Ruby problem where I needed to add 5 to every integer in the nested data structure. This required me to iterate through the multiple "layers" of nested structures to access each element. I came up with a solution like this:
+    </p>
+    <pre>
+    <code>
+number_array = [5, [10, 15], [20,25,30], 35]
+
+def add_five(array)
+  array.map! do |element|
+    if element.kind_of?(Array)
+      element.map! { |inner| inner + 5 }
+    else
+      element + 5
+    end
+  end
+end
+    </code>
+    </pre>
+    <p>
+      Basically, using "map!" I am analyzing the code to say "if the element is an Array, look inside it then add five to the Integer. If it's not an Array, it's an Integer, so just add five." This certainly does the trick and because there are only two layers of nesting, I don't need a lot of code to access the inner elements. But what if I have more nesting? What if I have an array within an array within an array within an array within...you get the idea. This is where recursion can help.
+    </p>
+  <h2 class="subhead">Using Recursion</h4>
+    <p>
+      A method using recursion refers back to itself and essentially looks at the "internal" solutions of the method to decide whether it needs to continue executing the method. For nested data structures, recursion can be incredibly helpful because regardless of the level of nesting, you can identify a "stopping point" for the recursion. Let's look at a refactored version of the problem above, this time using recursion:
+    </p>
+    <pre>
+    <code>
+def add_five(array)
+  array.map! do |element|
+    if element.kind_of?(Array)
+      add_five(element)
+    else
+      element = element + 5
+    end
+  end
+end
+    </code>
+    </pre>
+    <p>
+      In this solution, we use "map!" again, but to achieve a different type of iteration. In this case, we are essentially saying "Evaluate each element of the code. If the element is an Array, refer back to the add_five method. If it is not an Array (in this case, if it is an Integer), add five to the element." If you run the solution, you'll see we get the same output as the solution above. However, in the refactored solution, recursion allows us to add as many layers of nesting to the data structures as we want. So even if I have an array within an array within an array...etc., add_five will continue referring back to itself until the class is not Array.
+    </p>
+  </div>
+  <aside>
+    <p>
+      Interested in reading more of my posts? See a full list of my blog posts <a class="sunshine" href="http://www.github.io/blog/index.html">here</a>.
+    </p>
+  </aside>
+</article>
+</body>
