@@ -13,10 +13,19 @@ nav {
   text-align: right;
 }
 
+.block {
+  background-color: white;
+  margin: 10%;
+  padding: 10%;
+  border-radius: 5em;
+  position: absolute;
+  border-style: dashed gray 5px;
+}
+
 .quote {
-  margin-top: 15%;
   font-size: 14px;
   text-align: center;
+  font-weight: lighter;
 }
 
 .content {

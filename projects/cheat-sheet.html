@@ -1,0 +1,49 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="cheat-sheet.css">
+  <title>Becky's Cheat Sheet</title>
+</head>
+<body>
+  <header>
+    <h1>Ruby Fundamentals</h1>
+    <h2>Click on the <span>links</span> in the sheet to learn more about each component!</h2>
+  </header>
+  <section>
+    <pre>
+    <code>
+<a href="http://ruby-doc.org/core-2.2.0/Class.html">class MyClass</a>
+
+  def <a href = "http://www.rubyist.net/~slagell/ruby/objinitialization.html">initialize</a>(variable1, variable2)
+    <a href="https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables">@variable1</a> = <a href="http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/localvars.html">variable1</a>
+    @variable2 = variable2
+  end
+
+  def data_structures(my_hash, my_array)
+    @my_hash = my_hash
+    <a href="http://docs.ruby-lang.org/en/2.0.0/Hash.html">my_hash</a> = {
+      key1: value1,
+      key2: value2,
+      key3: value3
+    }
+
+    @my_array = my_array
+      <a href="http://ruby-doc.org/core-2.2.0/Array.html">my_array</a> = [0, 1, 2, 3]
+  end
+
+  def user_input
+    puts "Do you love Ruby?"
+    @answer = <a href="http://ruby-doc.org/docs/Tutorial/part_02/user_input.html">gets.chomp.downcase!</a>
+    <a href="http://www.tutorialspoint.com/ruby/ruby_if_else.htm">if</a> @answer == "yes"
+      puts "Yay! I do too."
+    else
+      puts "Shame on you!"
+    end
+  end
+
+
+end
+    </code>
+    </pre>
+  </section>
+</body>
+</html>
