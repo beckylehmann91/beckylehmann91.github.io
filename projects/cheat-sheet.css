@@ -1,0 +1,41 @@
+html {
+  background-color: #e5ffff;
+}
+
+header {
+  background-color: #f2f2f2;
+  font-family: "Lucida Sans Unicode";
+  color: black;
+  text-align: center;
+  padding: 5%;
+  border-style: solid;
+  border-color: black;
+  border-width: 10%;
+  border-radius: 2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #e60073;
+}
+
+span {
+  color: #e60073;
+}
+pre {
+  font-size: 2em;
+  margin-left: 30%;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+a:visited {
+  color: ;
+}
+
+a:hover {
+  color: #e60073;
+}
