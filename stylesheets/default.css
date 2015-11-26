@@ -26,7 +26,10 @@ img {
   padding-bottom: 5%;
   border-radius: 5em;
   position: absolute;
-  border-style: dashed gray 5px;
+  border-style: dashed;
+  border-color: #FF9900;
+  border-width: 150%;
+  border-radius: 2em;
 }
 
 .quote {
