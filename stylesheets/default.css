@@ -1,5 +1,5 @@
 * {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Candara";
   color:  #CFD1D1;
   text-decoration: none;
   text-align: center;
@@ -13,10 +13,17 @@ nav {
   text-align: right;
 }
 
+img {
+  height: 3em;
+  border-radius: 2em;
+  margin-left: 5%;
+}
+
 .block {
   background-color: white;
   margin: 10%;
   padding: 10%;
+  padding-bottom: 5%;
   border-radius: 5em;
   position: absolute;
   border-style: dashed gray 5px;
@@ -26,10 +33,11 @@ nav {
   font-size: 14px;
   text-align: center;
   font-weight: lighter;
+  opacity: 0.65;
 }
 
 .content {
-  margin-bottom: 40%;
+  margin-bottom: 20%;
 }
 
 .tagline {
