@@ -1,9 +1,14 @@
-img {
-  border-radius: 1.5em;
-  margin-top: 5%;
+.photo {
+  border-radius: 0.25em;
+  height: 20em;
+  margin: auto;
 }
 
 p {
   font-size: 1.25em;
   color:#919292
+}
+
+footer {
+  margin-top: 20%;
 }
