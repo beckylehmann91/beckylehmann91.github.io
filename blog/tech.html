@@ -58,7 +58,6 @@ end
     <p>
       In this solution, we use "map!" again, but to achieve a different type of iteration. In this case, we are essentially saying "Evaluate each element of the code. If the element is an Array, refer back to the add_five method. If it is not an Array (in this case, if it is an Integer), add five to the element." If you run the solution, you'll see we get the same output as the solution above. However, in the refactored solution, recursion allows us to add as many layers of nesting to the data structures as we want. So even if I have an array within an array within an array...etc., add_five will continue referring back to itself until the class is not Array.
     </p>
-  </div>
   <aside>
     <p>
       Interested in reading more of my posts? See a full list of my blog posts <a class="sunshine" href="http://www.github.io/blog/index.html">here</a>.
